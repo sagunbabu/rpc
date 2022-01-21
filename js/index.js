@@ -1,7 +1,7 @@
 const options = {
-  "rock": "/assets/r.png",
-  "paper": "/assets/p.png",
-  "scissors": "/assets/s.png"
+  "rock": "https://github.com/sagunbabu/rpc/blob/sagun/img/RR.png?raw=true",
+  "paper": "https://github.com/sagunbabu/rpc/blob/sagun/img/PP.png?raw=true",
+  "scissors": "https://github.com/sagunbabu/rpc/blob/sagun/img/SS.png?raw=true"
 }
 
 let SCORE = 0;
@@ -16,10 +16,10 @@ const pickUserHand = (hand) => {
 };
 
 const pickComputerHand = (hand) => {
-    let hands = ["rock", "paper", "scissors"];
-    let cpHand = hands[Math.floor(Math.random() * hands.length)];
-    document.getElementById("computerPickImage").src = options[cpHand]
-    referee(hand, cpHand);
+  let hands = ["rock", "paper", "scissors"];
+  let cpHand = hands[Math.floor(Math.random() * hands.length)];
+  document.getElementById("computerPickImage").src = options[cpHand]
+  referee(hand, cpHand);
 };
 
 const referee = (userHand, cpHand) => {
